@@ -1,17 +1,18 @@
 const mongoose=require("mongoose");
 
 
-const Usuarios=mongoose.Schema({
-    matricula:{
+const Personas=mongoose.Schema({
+    curp:{
         type:String,
         unique:true
     },
     nombre: String,
     apellidos: String,
     fechana: Date,
-    genero: String,
+    sexo: String,
     telefono: Number,
+    email:String,
     created_at:Date
 })
 
-module.exports=mongoose.model("Usuarios", Usuarios);
+module.exports=mongoose.model("Personas", Personas);
